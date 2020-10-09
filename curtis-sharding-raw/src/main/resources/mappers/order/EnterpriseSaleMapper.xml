@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.curtis.sharding.raw.mapper.EnterpriseSaleMapper">
+
+
+    <insert id="insertEnterpriseSale" parameterType="com.curtis.sharding.raw.entity.EnterpriseSale">
+        INSERT INTO tb_enterprise_sale
+        (id, city_code, enterprise_id, sale_day, sale_value)
+        VALUES (#{id},#{cityCode},#{enterpriseId},#{saleDay},#{saleValue})
+    </insert>
+
+    <select id="getEnterpriseSaleByCityCode" resultType="com.curtis.sharding.raw.entity.EnterpriseSale">
+        SELECT city_code, enterprise_id, sale_day, sale_value
+        FROM tb_enterprise_sale
+        <where>
+            <if test="enterpriseId != null">
+                AND enterprise_id = #{enterpriseId}
+            </if>
+            <if test="cityCode != null">
+                AND city_code = #{cityCode}
+            </if>
+        </where>
+    </select>
+
+
+    <select id="getEnterpriseSaleBySaleDay" resultType="com.curtis.sharding.raw.entity.EnterpriseSale">
+        SELECT city_code, enterprise_id, sale_day, sale_value
+        FROM tb_enterprise_sale
+        <where>
+            <if test="enterpriseId != null">
+                AND enterprise_id = #{enterpriseId}
+            </if>
+            <if test="saleDay != null">
+                AND sale_day = #{saleDay}
+            </if>
+        </where>
+    </select>
+
+    <select id="getEnterpriseSaleByCityCodeAndSaleDay" resultType="com.curtis.sharding.raw.entity.EnterpriseSale">
+        SELECT city_code, enterprise_id, sale_day, sale_value
+        FROM tb_enterprise_sale
+        <where>
+            <if test="enterpriseId != null">
+                AND enterprise_id = #{enterpriseId}
+            </if>
+            <if test="cityCodes != null and cityCodes.size() > 0">
+                AND city_code IN
+                <foreach collection="cityCodes" open="(" close=")" separator="," item="cityCode">
+                    #{cityCode}
+                </foreach>
+            </if>
+            <if test="saleDay != null">
+                AND sale_day = #{saleDay}
+            </if>
+        </where>
+    </select>
+
+    <select id="getEnterpriseSaleByCityCodesAndBetweenSaleDay" resultType="com.curtis.sharding.raw.entity.EnterpriseSale">
+        SELECT city_code, enterprise_id, sale_day, sale_value
+        FROM tb_enterprise_sale
+        <where>
+            <if test="enterpriseId != null">
+                AND enterprise_id = #{enterpriseId}
+            </if>
+            <if test="cityCodes != null and cityCodes.size() > 0">
+                AND city_code IN
+                <foreach collection="cityCodes" open="(" close=")" separator="," item="cityCode">
+                    #{cityCode}
+                </foreach>
+            </if>
+            <if test="minSaleDay != null and maxSaleDay != null">
+                AND sale_day BETWEEN #{minSaleDay} AND #{maxSaleDay}
+            </if>
+        </where>
+    </select>
+
+</mapper>

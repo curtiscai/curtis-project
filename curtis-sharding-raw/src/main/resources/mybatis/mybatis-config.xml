@@ -1,0 +1,39 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">-->
+<!--&lt;!&ndash; refer:https://mybatis.org/mybatis-3/zh/configuration.html-->
+<!--           https://www.jianshu.com/p/2756e81d02ff-->
+<!--           http://www.mybatis.cn/680.html-->
+<!--    &ndash;&gt;-->
+<!--<configuration>-->
+<!--    &lt;!&ndash; 属性：定义配置外在化 &ndash;&gt;-->
+<!--    <properties></properties>-->
+<!--    &lt;!&ndash; 设置：定义mybatis的一些全局性设置 &ndash;&gt;-->
+<!--    <settings>-->
+<!--        &lt;!&ndash; 具体的参数名和参数值 &ndash;&gt;-->
+<!--        <setting name="" value=""/>-->
+<!--    </settings>-->
+<!--    &lt;!&ndash; 类型名称：为一些类定义别名 &ndash;&gt;-->
+<!--    <typeAliases></typeAliases>-->
+<!--    &lt;!&ndash; 类型处理器：定义Java类型与数据库中的数据类型之间的转换关系 &ndash;&gt;-->
+<!--    <typeHandlers></typeHandlers>-->
+<!--    &lt;!&ndash; 对象工厂 &ndash;&gt;-->
+<!--    <objectFactory type=""></objectFactory>-->
+<!--    &lt;!&ndash; 插件：mybatis的插件,插件可以修改mybatis的内部运行规则 &ndash;&gt;-->
+<!--    <plugins>-->
+<!--        <plugin interceptor=""></plugin>-->
+<!--    </plugins>-->
+<!--    &lt;!&ndash; 环境：配置mybatis的环境 &ndash;&gt;-->
+<!--    <environments default="">-->
+<!--        &lt;!&ndash; 环境变量：可以配置多个环境变量，比如使用多数据源时，就需要配置多个环境变量 &ndash;&gt;-->
+<!--        <environment id="">-->
+<!--            &lt;!&ndash; 事务管理器 &ndash;&gt;-->
+<!--            <transactionManager type=""></transactionManager>-->
+<!--            &lt;!&ndash; 数据源 &ndash;&gt;-->
+<!--            <dataSource type=""></dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+<!--    &lt;!&ndash; 数据库厂商标识 &ndash;&gt;-->
+<!--    <databaseIdProvider type=""></databaseIdProvider>-->
+<!--    &lt;!&ndash; 映射器：指定映射文件或者映射类 &ndash;&gt;-->
+<!--    <mappers></mappers>-->
+<!--</configuration>-->

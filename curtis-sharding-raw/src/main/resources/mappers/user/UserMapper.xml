@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.curtis.sharding.raw.mapper.UserMapper" >
+
+  <!--
+  开启mybatis.type-aliases-package=com.curtis.sharding.entity后不需要使用完全限定类名，resultType直接使用类名，或者类名首字母小写就可以
+  使用mybatis.configuration.map-underscore-to-camel-case=true 开启驼峰命名转换，字段xx_yy自动映射到xxYy属性上，不需要显式转换
+  -->
+  <select id="getUsers" resultType="com.curtis.sharding.raw.entity.User">
+    SELECT id, name, sex, birth, phone, height, address, create_time, update_time
+    FROM tb_user
+    WHERE is_del=0;
+  </select>
+</mapper>
