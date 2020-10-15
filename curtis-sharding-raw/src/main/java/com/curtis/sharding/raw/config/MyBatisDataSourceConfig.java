@@ -20,7 +20,7 @@ import javax.sql.DataSource;
  * @reference
  */
 //@EnableTransactionManagement
-@MapperScan(basePackages = "com.curtis.sharding.raw.**.mapper")
+@MapperScan(basePackages = "com.curtis.sharding.**.mapper")
 @Configuration
 public class MyBatisDataSourceConfig {
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.curtis.sharding.mapper.OrderMapper">
+
+    <!--
+    开启mybatis.type-aliases-package=com.curtis.sharding.entity后不需要使用完全限定类名，resultType直接使用类名，或者类名首字母小写就可以
+    使用mybatis.configuration.map-underscore-to-camel-case=true 开启驼峰命名转换，字段xx_yy自动映射到xxYy属性上，不需要显式转换
+    -->
+    <insert id="insertOrder" parameterType="com.curtis.sharding.entity.Order">
+        INSERT INTO tb_order(order_id, user_id, address_id)
+        VALUES (#{orderId},#{userId},#{addressId})
+    </insert>
+
+    <select id="getOrderByUserId" resultType="com.curtis.sharding.entity.Order">
+        SELECT order_id, user_id, address_id
+        FROM tb_order
+        WHERE user_id=#{userId};
+    </select>
+
+    <select id="getOrderByOrderId" resultType="com.curtis.sharding.entity.Order">
+        SELECT order_id, user_id, address_id
+        FROM tb_order
+        WHERE order_id=#{orderId};
+    </select>
+
+    <select id="getOrdersInOrderIds" resultType="com.curtis.sharding.entity.Order">
+        SELECT order_id, user_id, address_id
+        FROM tb_order
+        WHERE order_id IN
+        <foreach collection="orderIds" item="orderId" open="(" close=")" separator=",">
+            #{orderId}
+        </foreach>;
+    </select>
+
+    <select id="getOrderByUserIdAndOrderId" resultType="com.curtis.sharding.entity.Order">
+        SELECT order_id, user_id, address_id
+        FROM tb_order
+        WHERE user_id=#{userId} AND order_id=#{orderId};
+    </select>
+
+    <select id="getOrdersBetweenOrderId" resultType="com.curtis.sharding.entity.Order">
+        SELECT order_id, user_id, address_id
+        FROM tb_order
+        WHERE order_id BETWEEN #{minOrderId} AND #{maxOrderId};
+    </select>
+
+    <select id="getOrdersGreaterThanOrderId" resultType="com.curtis.sharding.entity.Order">
+        SELECT order_id, user_id, address_id
+        FROM tb_order
+        WHERE order_id >= #{minOrderId};
+    </select>
+</mapper>
