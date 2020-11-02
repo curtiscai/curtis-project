@@ -134,7 +134,8 @@
         <!-- 用于处理/读写shapefile数据相关依赖-结束 -->
 
 
-        <!-- https://mvnrepository.com/artifact/ch.hsr/geohash -->
+        <!-- geohash相关依赖 -->
+        <!-- https://mvnrepository.com/artifact/ch.hsr/geohash Jan, 2016-->
         <dependency>
             <groupId>ch.hsr</groupId>
             <artifactId>geohash</artifactId>
