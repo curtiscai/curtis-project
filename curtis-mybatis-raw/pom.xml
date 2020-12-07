@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.curtis</groupId>
-    <artifactId>curtis-mybatis-javaconfig</artifactId>
+    <artifactId>curtis-mybatis-raw</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>curtis-mybatis-javaconfig</name>
+    <name>curtis-mybatis-raw</name>
     <description>使用Java Config配置使用MyBatis</description>
 
     <properties>
@@ -113,6 +113,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.0</version>
             </plugin>
         </plugins>
     </build>

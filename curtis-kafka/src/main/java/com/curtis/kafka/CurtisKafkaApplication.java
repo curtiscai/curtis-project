@@ -1,13 +1,13 @@
-package com.curtis.tencent;
+package com.curtis.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CurtisTencentApplication {
+public class CurtisKafkaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CurtisTencentApplication.class, args);
+        SpringApplication.run(CurtisKafkaApplication.class, args);
     }
 
 }
