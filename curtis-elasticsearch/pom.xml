@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.curtis</groupId>
-    <artifactId>curtis-kafka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>curtis-kafka</name>
-    <description>Kafka相关API使用示例</description>
+    <artifactId>curtis-elasticsearch</artifactId>
+    <version>0.0.1</version>
+    <name>curtis-elasticsearch</name>
+    <description>ElasticSearch相关API使用示例</description>
 
     <properties>
         <java.version>1.8</java.version>
