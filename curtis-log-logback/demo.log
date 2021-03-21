@@ -1,0 +1,17 @@
+2021-03-18 22:43:39,573 INFO [main] c.c.l.LogBackTest [LogBackTest.java : 12] this is a message
+2021-03-18 22:43:39,575 INFO [main] j.l.Object [LogBackTest.java : 13] this is a message
+22:54:19.726 [main] INFO  LogBackTest - this is a message
+22:54:19.728 [main] INFO  java.lang.Object - this is a message
+22:55:23.806 [main] INFO  LogBackTest - this is a message
+22:55:23.808 [main] INFO  java.lang.Object - this is a message
+00:01:45.602 [main] INFO  LogBackTest - this is a message
+00:01:45.604 [main] INFO  java.lang.Object - this is a message
+00:03:21.848 [main] INFO  java.lang.Object - this is a message
+00:10:10.812 [main] INFO  java.lang.Object - this is a message
+00:10:13.934 [main] INFO  LogBackTest - this is a message
+00:10:13.937 [main] INFO  java.lang.Object - this is a message
+00:10:19.047 [main] INFO  LogBackTest - this is a message
+00:10:19.050 [main] INFO  java.lang.Object - this is a message
+00:10:34.573 [main] INFO  LogBackTest - this is a message
+00:10:34.577 [main] INFO  java.lang.Object - this is a message
+00:10:47.133 [main] INFO  java.lang.Object - this is a message
