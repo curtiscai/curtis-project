@@ -28,6 +28,7 @@
             <version>1.7.30</version>
         </dependency>
 
+        <!-- log4j2依赖 -->
         <!-- http://logging.apache.org/log4j/2.x/maven-artifacts.html -->
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core (Mar 12, 2021)-->
         <dependency>
@@ -43,11 +44,12 @@
             <version>${log4j.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic (Mar 31, 2017) -->
+        <!-- log4j2与slf4j桥接/banding -->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl (Mar 12, 2021)-->
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version>
             <!--            <scope>test</scope>-->
         </dependency>
 
