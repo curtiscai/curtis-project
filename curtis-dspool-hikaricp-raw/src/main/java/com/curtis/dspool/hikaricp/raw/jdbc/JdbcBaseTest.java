@@ -4,18 +4,19 @@ import org.junit.Test;
 
 import java.sql.*;
 
-public class JdbcTest {
+public class JdbcBaseTest {
 
     @Test
     public void testJdbc() {
 
-        //1.加载驱动程序
+        //1.加载驱动程序到JVM中
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
+            // Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        // Class.forName("com.mysql.jdbc.Driver");
+
         String url = "jdbc:mysql://192.168.2.100:3306/db_test?useSSL=false&serverTimezone=UTC";
         String user = "root";
         String password = "000000";
