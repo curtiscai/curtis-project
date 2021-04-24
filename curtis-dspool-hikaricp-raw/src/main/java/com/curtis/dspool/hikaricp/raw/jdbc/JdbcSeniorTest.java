@@ -31,11 +31,11 @@ public class JdbcSeniorTest {
             connection = DriverManager.getConnection(url, user, password);
             connection.setAutoCommit(false);
 
-            String selectSql = "INSERT INTO tb_user\n" +
+            String insertSql = "INSERT INTO tb_user\n" +
                     "    (id, name, sex, birth, phone) \n" +
                     "VALUES \n" +
                     "    (?,?,?,?,?);";
-            PreparedStatement preparedStatement = connection.prepareStatement(selectSql);
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
             int dataSize = 1000;
             Savepoint halfPoint = null;
             for (int i = 1; i <= dataSize; i++) {

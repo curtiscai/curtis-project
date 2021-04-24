@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    # YML文件的坑，纯数字密码尤其高位是0的需要使用单引号
+    password: '000000'
+    url: jdbc:mysql://192.168.2.100:3306/db_test?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    # SpringBoot 2.x默认连接池
+    type: com.zaxxer.hikari.HikariDataSource
